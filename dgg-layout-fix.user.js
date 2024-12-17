@@ -87,6 +87,24 @@ body .control-badges {
     flex-direction: row;
     align-self: center;
   }
+  body .stream-panel .stream-controls {
+    padding: 0;
+    flex-direction: column;
+  }
+}
+
+@container (width < 930px) {
+  body .control-buttons .button span {
+    display: none;
+  }
+  body .navbar__items .button span {
+    display: none;
+  }
+}
+@container (width < 1050px) {
+  body .navbar__socials {
+    display: none;
+  }
 }
 `);
 
