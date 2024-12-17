@@ -47,10 +47,25 @@ body .navbar__items.navbar__socials {
 body .navbar__items.navbar__socials .navbar__icon {
   height: 1.5rem;
 }
+
 .stream-controls[data-embed-type="offline"] #close-embed-btn,
 .stream-controls[data-embed-type="live"] #close-embed-btn,
 .stream-controls[data-embed-type="host"] #close-embed-btn {
 }
+header:has(~ #stream-wrap .stream-controls[data-embed-type="offline"]) #close-embed-btn,
+header:has(~ #stream-wrap .stream-controls[data-embed-type="live"]) #close-embed-btn,
+header:has(~ #stream-wrap .stream-controls[data-embed-type="host"]) #close-embed-btn {
+}
+
+header:has(~ #stream-wrap .stream-controls[data-embed-type="live"]) #close-embed-btn,
+header:has(~ #stream-wrap .stream-controls[data-embed-type="host"]) #close-embed-btn {
+  display: none;
+}
+header:has(~ #stream-wrap .stream-controls[data-embed-type="offline"]) #change-platform-btn {
+  display: none;
+}
+
+
 body .button {
   padding: 0 .4rem;
   height: 2rem;
