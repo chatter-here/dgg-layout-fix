@@ -74,9 +74,9 @@ body .navbar__logo {
   min-width: fit-content; /* prevent horizontal squishing */
 }
 body .stream-controls__group {
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   padding-bottom: 3px;
 }
 body .control-badges {
@@ -95,22 +95,26 @@ ready(() => {
   document.querySelector('.navbar .navbar__item[href="/"').remove(); // redundant
 
   // TODO tinker with responsive collapsing
-  // const moneyButtons = document.createElement('div');
-  // moneyButtons.className = 'navbar__items _layoutfix_navbar__money';
-  // moveBefore(
-  //   moneyButtons,
-  //   document.querySelector('.navbar__actions')
-  // );
+  const moneyButtons = document.createElement("div");
+  moneyButtons.className = "navbar__items _layoutfix_navbar__money";
+  moveBefore(
+    moneyButtons,
+    document.querySelector(".navbar__actions>:first-child")
+  );
 
   moveAppend(
     document.getElementById("donate-btn"),
-    document.querySelector(".navbar__items.navbar__navigation")
-    // moneyButtons
+    // document.querySelector(".navbar__items.navbar__navigation")
+    moneyButtons
   );
   moveAppend(
     document.getElementById("subscribe-btn"),
-    document.querySelector(".navbar__items.navbar__navigation")
-    // moneyButtons
+    // document.querySelector(".navbar__items.navbar__navigation")
+    moneyButtons
+  );
+  moveBefore(
+    document.getElementById("control-title"),
+    document.querySelector(".control-badges")
   );
   moveBefore(
     document.getElementById("stream-controls"),
