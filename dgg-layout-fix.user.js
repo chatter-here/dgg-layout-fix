@@ -115,10 +115,6 @@ ready(() => {
   // TODO tinker with responsive collapsing
   const moneyButtons = document.createElement("div");
   moneyButtons.className = "navbar__items _layoutfix_navbar__money";
-  moveBefore(
-    moneyButtons,
-    document.querySelector(".navbar__actions>:first-child")
-  );
 
   moveAppend(
     document.getElementById("donate-btn"),
@@ -141,6 +137,10 @@ ready(() => {
   moveBefore(
     document.getElementById("control-buttons"),
     // document.querySelector('.navbar__actions')
-    document.querySelector(".navbar__actions .dropdown-root")
+    document.querySelector(".navbar__actions>:first-child")
+  );
+  moveBefore(
+    moneyButtons,
+    document.querySelector(".navbar__actions>:first-child")
   );
 });
