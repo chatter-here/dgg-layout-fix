@@ -77,7 +77,7 @@ body #stream-wrap {
 }
 body #stream-controls {
   gap: 0;
-  padding-top: 0;
+  padding: 0 .5rem;
 }
 body #stream-controls .stream-controls__group {
   gap: 0;
