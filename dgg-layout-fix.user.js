@@ -55,12 +55,9 @@ body .navbar__items.navbar__socials .navbar__icon {
 header:has(~ #stream-wrap .stream-controls[data-embed-type="offline"]) #close-embed-btn,
 header:has(~ #stream-wrap .stream-controls[data-embed-type="live"]) #close-embed-btn,
 header:has(~ #stream-wrap .stream-controls[data-embed-type="host"]) #close-embed-btn {
-}
-
-header:has(~ #stream-wrap .stream-controls[data-embed-type="live"]) #close-embed-btn,
-header:has(~ #stream-wrap .stream-controls[data-embed-type="host"]) #close-embed-btn {
   display: none;
 }
+header:has(~ #stream-wrap .stream-controls[data-embed-type="embed"]) #change-platform-btn,
 header:has(~ #stream-wrap .stream-controls[data-embed-type="offline"]) #change-platform-btn {
   display: none;
 }
